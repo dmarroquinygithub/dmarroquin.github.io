@@ -29,7 +29,7 @@ function mostrarNoticias(noticias) {
 
     const image = document.createElement('img');
     image.classList.add('news-image');
-    image.src = noticia.image || 'default-image.jpg'; // Usa una imagen por defecto si no hay imagen en la noticia
+    image.src = noticia.image !== 'None' ? noticia.image : 'https://wpdirecto.com/wp-content/uploads/2017/08/alt-de-una-imagen.png'; // Usa una imagen por defecto si no hay imagen en la noticia
     image.alt = noticia.title;
 
     const title = document.createElement('h2');
